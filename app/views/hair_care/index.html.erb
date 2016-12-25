@@ -1,0 +1,18 @@
+
+<%= @getResponde %>
+<% def theNodeX %>
+	 <%= render 'xpage' %>
+<% end %>
+
+<% def theNodeY %>
+	 <%= render 'ypage' %>
+<% end %>
+
+<% if @xNode %>
+	<% theNodeX() %>
+<% elsif @yNode %>
+	<% theNodeY() %>
+<% else %>
+	<% theNodeX() %>
+<% end %>
+		

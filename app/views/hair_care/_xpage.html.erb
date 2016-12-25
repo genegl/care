@@ -1,0 +1,167 @@
+
+    <!-- Page Content -->
+    <div class="container">
+    <%= render 'top' %>
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Hair Care
+                    <small><%= @youHere %> / <%= @menuNames[@xNode] %></small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src=<%= @itemsImgs[0] %> alt="">
+                </a>
+                <h3>
+                    <a href="#"><%= @itemsMdl[0] %></a>
+                </h3>
+                <p><%= @itemsTtl[0] %></p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src=<%= @itemsImgs[1] %> alt="">
+                </a>
+                <h3>
+                    <a href="#"><%= @itemsMdl[1] %></a>
+                </h3>
+                <p><%= @itemsTtl[1] %></p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src=<%= @itemsImgs[2] %> alt="">
+                </a>
+                <h3>
+                    <a href="#"><%= @itemsMdl[2] %></a>
+                </h3>
+                <p><%= @itemsTtl[2] %></p>
+            </div>
+        </div>
+        <!-- /.row -->
+<p><hr></p>
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src=<%= @itemsImgs[3] %> alt="">
+                </a>
+                <h3>
+                    <a href="#"><%= @itemsMdl[3] %></a>
+                </h3>
+                <p><%= @itemsTtl[3] %></p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src=<%= @itemsImgs[4] %> alt="">
+                </a>
+                <h3>
+                    <a href="#"><%= @itemsMdl[4] %></a>
+                </h3>
+                <p><%= @itemsTtl[4] %></p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src=<%= @itemsImgs[5] %> alt="">
+                </a>
+                <h3>
+                    <a href="#"><%= @itemsMdl[5] %></a>
+                </h3>
+                <p><%= @itemsTtl[5] %></p>
+            </div>
+        </div>
+<p><hr></p>
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src=<%= @itemsImgs[6] %> alt="">
+                </a>
+                <h3>
+                    <a href="#"><%= @itemsMdl[6] %></a>
+                </h3>
+                <p><%= @itemsTtl[6] %></p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src=<%= @itemsImgs[7] %> alt="">
+                </a>
+                <h3>
+                    <a href="#"><%= @itemsMdl[7] %></a>
+                </h3>
+                <p><%= @itemsTtl[7] %></p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src=<%= @itemsImgs[8] %> alt="">
+                </a>
+                <h3>
+                    <a href="#"><%= @itemsMdl[9] %></a>
+                </h3>
+                <p><%= @itemsTtl[8] %></p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <% if @xNode == nil %>
+                        <% @xNode = "11057241" %>
+                    <% end %>
+
+                    <% if @baseUrl == nil %>
+                        <% @baseUrl = $theBase %>
+                    <% end %>
+
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li>
+                        <a href=<%= @baseUrl + "?z=" + @xNode + "&p=1" %>>1</a>
+                    </li>
+                    <li>
+                        <a href=<%= @baseUrl + "?z=" + @xNode + "&p=2" %>>2</a>
+                    </li>
+                    <li>
+                        <a href=<%= @baseUrl + "?z=" + @xNode + "&p=3" %>>3</a>
+                    </li>
+                    <li>
+                        <a href=<%= @baseUrl + "?z=" + @xNode + "&p=4" %>>4</a>
+                    </li>
+                    <li>
+                        <a href=<%= @baseUrl + "?z=" + @xNode + "&p=5" %>>5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                <center>
+                    <p>Copyright &copy; <a href='<%= $theBase %>' >Your Website 2017</a> --- Best Hair Care Products --- <a href='http://style2me.com' target='_blanc'>style2me.com</a></p>
+                </center>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+   

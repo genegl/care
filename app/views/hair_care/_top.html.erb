@@ -1,0 +1,49 @@
+
+<p>&nbsp;</p>
+<p><font size=5><%= link_to 'Home', $theBase %></font></p>
+    <center>
+<font size=4><%= link_to 'Shampoo', $theBase + 'haircare/shampoo?z=11057651' %>  - <%= link_to 'Conditioner', $theBase + 'haircare/conditioner?z=11057251' %> - <%= link_to 'Styling Products', $theBase + 'haircare/styling?z=11057841' %> - <%= link_to 'Hair Color', $theBase + 'haircare/color?z=11057451' %> - <%= link_to 'Hair Care', $theBase + 'haircare/care?z=10666241011' %> - <%= link_to 'Hair Accessories', $theBase + 'haircare/accessories?z=11057971' %> - <%= link_to 'Styling Tools and Appliences', $theBase + 'haircare/tools?z=11058091' %> - <%= link_to 'Perms and Straighteners', $theBase + 'haircare/perms?z=3781901' %> - <%= link_to 'Relaxers and Texturizers', $theBase + 'haircare/relaxers?z=10702858011' %> - <%= link_to 'Extensions and Accessories', $theBase + 'haircare/extension?z=13105931' %> - <%= link_to 'Hair Cutting Tools', $theBase + 'haircare/cutting?z=10676449011' %></font>
+    </center>
+
+    <% case @xNode %>
+		<% when '11057651','10656662011','10656663011','10656664011','11057441','3781381' %>
+			<% @youHere = "/ Shampoo" %>
+			<p><center>
+			Shampoo: <%= link_to '3-in-1 Shampoo', $theBase + 'haircare/shampoo/3in1?z=10656662011' %> - <%= link_to 'Daily Shampoo', $theBase + 'haircare/shampoo/daily?z=10656663011' %> - <%= link_to 'Dry Shampoo', $theBase + 'haircare/shampoo/dry?z=10656664011' %> - <%= link_to 'Shampoo & Conditioner Sets', $theBase + 'haircare/shampoo/sets?z=11057441' %> - <%= link_to 'Shampoo Plus Conditioner', $theBase + 'haircare/shampoo/conditioner?z=3781381' %>
+			</center></p>
+		<% when '11057841','10664362011','11057871','11057891','11057901','10666019011','11057931','10664802011','10666084011' %>
+			<% @youHere = "/ Styling Products" %>
+			<p><center>
+			Styling Products: <%= link_to 'Detanglers', $theBase + 'haircare/styling/detanglers?z=10664362011' %> - <%= link_to 'Gels', $theBase + 'haircare/styling/gels?z=11057871' %> - <%= link_to 'Hair Sprays', $theBase + 'haircare/styling/sprays?z=11057891' %> - <%= link_to 'Mousses & Foams', $theBase + 'haircare/styling/mousses?z=11057901' %> - <%= link_to 'Oils & Serums', $theBase + 'haircare/styling/oils?z=10666019011' %> - <%= link_to 'Pomades & Waxes', $theBase + 'haircare/styling/pomades?z=11057931' %> - <%= link_to 'Putties & Clays', $theBase + 'haircare/styling/clays?z=10664802011' %> - <%= link_to 'Styling Treatments', $theBase + 'haircare/styling/treatments?z=10666084011' %>
+			</center></p>
+		<% when '11057451','10728531','10676298011','3781671','10676302011','3784201','3784151','3784161','3784171','3784181','3784191','10676347011','10676355011','10676359011','3781641' %>
+			<% @youHere = "/ Hair Color" %>
+			<p><center>
+			Hair Color: <%= link_to 'Hair Color', $theBase + 'haircare/color/color?z=10728531' %> - <%= link_to 'Color Additives & Fillers', $theBase + 'haircare/color/fillers?z=10676298011' %> - <%= link_to 'Color Correctors', $theBase + 'haircare/color/correctors?z=3781671' %> - <%= link_to 'Color Glazes', $theBase + 'haircare/color/glazes?z=10676302011' %> - <%= link_to 'Color Removers', $theBase + 'haircare/color/removers?z=3784201' %> - <%= link_to 'Coloring & Highlighting Tools', $theBase + 'haircare/color/tools?z=3784151' %> - <%= link_to 'Applicator Bottles', $theBase + 'haircare/color/bottles?z=3784161' %> - <%= link_to 'Brushes, Combs & Needles', $theBase + 'haircare/color/brushes?z=3784171' %> - <%= link_to 'Caps, Foils & Wraps', $theBase + 'haircare/color/caps?z=3784181' %> - <%= link_to 'Hair Color Mixing Bowls', $theBase + 'haircare/color/bowls?z=3784191' %> - <%= link_to 'Developers', $theBase + 'haircare/color/developers?z=10676347011' %> - <%= link_to 'Hair Chalk', $theBase + 'haircare/color/chalk?z=10676355011' %> - <%= link_to 'Hair Mascaras & Root Touch Ups', $theBase + 'haircare/color/mascaras?z=10676359011' %> - <%= link_to 'Hennas', $theBase + 'haircare/color/hennas?z=3781641' %>
+			</center></p>
+		<% when '10666241011','11057431','10666437011','10666439011' %>
+			<% @youHere = "/ Hair Care" %>
+			<p><center>
+			Hair Care: <%= link_to 'Hair & Scalp Treatments', $theBase + 'haircare/haircare/treatments?z=11057431' %> - <%= link_to 'Hair Masks', $theBase + 'haircare/haircare/masks?z=10666437011' %> - <%= link_to 'Treatment Oils', $theBase + 'haircare/haircare/oils?z=10666439011' %>
+			</center></p>
+		<% when '11057971','11057981','10676142011','3784401','11058071','3784491','3784391','11058051','11058011' %>
+			<% @youHere = "/ Hair Accessories" %>
+			<p><center>
+			Hair Accessories: <%= link_to 'Barrettes', $theBase + 'haircare/accessories/barrettes?z=11057981' %> - <%= link_to 'Bun & Crown Shapers', $theBase + 'haircare/accessories/bun?z=10676142011' %> - <%= link_to 'Clips', $theBase + 'haircare/accessories/clips?z=3784401' %> - <%= link_to 'Elastics & Ties', $theBase + 'haircare/accessories/elastics?z=11058071' %> - <%= link_to 'Hair Drying Towels', $theBase + 'haircare/accessories/towels?z=3784491' %> - <%= link_to 'Hair Pins', $theBase + 'haircare/accessories/pins?z=3784391' %> - <%= link_to 'Headbands', $theBase + 'haircare/accessories/headbands?z=11058051' %> - <%= link_to 'Side Combs', $theBase + 'haircare/accessories/combs?z=11058011' %>
+			</center></p>
+		<% when '11058091','3784341','11058251','11058111','11058121','11058131','11058141','3784371','11058221','11058261' %>
+			<% @youHere = "/ Styling Tools & Appliances" %>
+			<p><center>
+			Styling Tools &amp; Appliances: <%= link_to 'Crimpers & Wavers', $theBase + 'haircare/tools/crimpers?z=3784341' %> - <%= link_to 'Curling Irons & Wands', $theBase + 'haircare/tools/curling?z=11058251' %> - <%= link_to 'Diffusers & Dryer Attachments', $theBase + 'haircare/tools/diffusers?z=11058111' %> - <%= link_to 'Hair Brushes', $theBase + 'haircare/tools/brushes?z=11058121' %> - <%= link_to 'Hair Combs', $theBase + 'haircare/tools/combs?z=11058131' %> - <%= link_to 'Hair Dryers', $theBase + 'haircare/tools/dryers?z=11058141' %> - <%= link_to 'Hair Rollers', $theBase + 'haircare/tools/rollers?z=3784371' %> - <%= link_to 'Hot-Air Brushes', $theBase + 'haircare/tools/hot?z=11058221' %> - <%= link_to 'Straighteners', $theBase + 'haircare/tools/straighteners?z=11058261' %>
+			</center></p>
+		<% when '13105931','10676812011','10676816011','702379011','702380011','10676818011','702381011' %>
+			<% @youHere = "/ Extensions, Wigs & Accessories" %>
+			<p><center>
+			Extensions, Wigs &amp; Accessories: <%= link_to 'Adhesives', $theBase + 'haircare/extensions/adhesives?z=10676812011' %> - <%= link_to 'Feather Extensions', $theBase + 'haircare/extensions/feather?z=10676816011' %> - <%= link_to 'Hair Extensions', $theBase + 'haircare/extensions/hair?z=702379011' %> - <%= link_to 'Hairpieces', $theBase + 'haircare/extensions/hairpieces?z=702380011' %> - <%= link_to 'Wig Caps', $theBase + 'haircare/extensions/caps?z=10676818011' %> - <%= link_to 'Wigs', $theBase + 'haircare/extensions/wigs?z=702381011' %>
+			</center></p>
+		<% when '10676449011','7706130011','3006301011','3006300011' %>
+			<% @youHere = "/ Hair Cutting Tools" %>
+			<p><center>
+			Hair Cutting Tools: <%= link_to 'Hair Clippers & Accessories', $theBase + 'haircare/cutting/accessories?z=7706130011' %> - <%= link_to 'Hair Cutting Kits', $theBase + 'haircare/cutting/kits?z=3006301011' %> - <%= link_to 'Shears', $theBase + 'haircare/cutting/shears?z=3006300011' %>
+			</center></p>
+	<% end %>
