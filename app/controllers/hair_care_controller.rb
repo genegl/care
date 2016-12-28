@@ -217,7 +217,7 @@ class HairCareController < ApplicationController
 					x1 = xList.index("<ASIN>", y1)
 					w1 = xList.index("</Item>", x1)
 					x2 = xList.index("<LargeImage>", x1)
-					if x2 < w1
+					if x2 && x2 < w1
 						x3 = xList.index("<URL>", x2)
 						y1 = xList.index("</URL>", x3)
 						@itemImg = xList[(x3+5)...y1]
@@ -284,7 +284,7 @@ class HairCareController < ApplicationController
 					x2 = xList.index("<Title>", x1)
 					y1 = xList.index("</Title>", x2)
 					xTtl = xList[(x2+7)...y1]
-					@itemTtl = xTtl
+					@itemTtl = xTtl.html_safe
 			
 					return @itemTtl
 				end
@@ -314,14 +314,43 @@ class HairCareController < ApplicationController
 							r1 = false
 						end
 					end
+					xDscr = @indDscr.join
+					xDscr = xDscr.html_safe
+					return xDscr
+				end
 
-					return @indDscr
+				def getModel(xList)
+
+					y1 = 0
+					x1 = 0
+					x2 = 0
+					itemsMdls = []
+
+					
+						x1 = xList.index("<ASIN>", y1)
+						if x1
+							x2 = xList.index("<Brand>", x1)
+								if x2
+									y1 = xList.index("</Brand>", x2)
+									itemsMdls = xList[(x2+7)...y1]
+									itemsMdls = itemsMdls.html_safe
+								else
+									itemsMdls = ''
+									y1 = x1 + 1
+								end
+						else
+							itemsMdls = ''
+						end
+					
+
+					return itemsMdls
 				end
 
 				@oneImg = getPics(@getRespond)
 				@onePrc = getPrice(@getRespond)
 				@oneTtl = getTitle(@getRespond)
 				@oneDscr = getDescr(@getRespond)
+				@oneMdl = getModel(@getRespond)
 
 			else								# Data for base page (http://youraddress.com)
 				def getPics(xList)
